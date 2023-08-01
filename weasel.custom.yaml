@@ -2,14 +2,14 @@ customization:
   distribution_code_name: Weasel
   distribution_version: 0.14.3_dev_0.8
   generator: "Weasel::UIStyleSettings"
-  modified_time: "Thu Sep  8 23:37:34 2022"
+  modified_time: "Fri Nov 18 22:48:27 2022"
   rime_version: 1.7.3
 patch:
   "preset_color_schemes/shiba_custom_theme":
     __include: "shiba_custom_theme:/shiba_custom_theme"
   "style/color_scheme": shiba_custom_theme
-  "style/font_face": "HarmonyOS Sans TC Thin"
-  "style/label_font_face": "HarmonyOS Sans TC Thin"
+  "style/font_face": "HarmonyOS Sans TC Light"
+  "style/label_font_face": "HarmonyOS Sans TC Light"
   "style/inline_preedit": true
   "style/layout/candidate_spacing": 8
   "style/layout/margin_x": 8
