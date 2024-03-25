@@ -1,18 +1,24 @@
 patch:
-  switches/@4:
-    options: [ zh_tw, zh_simp ]
-    reset: 0
-    states: [ 臺灣正體, 简体中文 ]
-
+  switches:
+    - options: [zh_tw, zh_cn]
+      states:
+        - 臺灣正體
+        - 大陸簡體
+      reset: 0  #默認輸出大陸簡體，如果要默認輸出臺灣正體，請改0為1
+    - name: ascii_mode
+      reset: 0
+      states: [ 中文, 西文 ]
+    - name: full_shape
+      states: [ 半角, 全角 ]
+    - name: ascii_punct
+      states: [ 。，, ．， ]
   engine/filters:
-    - simplifier@zh_simp
     - simplifier@zh_tw
+    - simplifier@zh_cn
     - uniquifier
-
   zh_tw:
     option_name: zh_tw
     opencc_config: t2tw.json
-
-  zh_simp:
-    option_name: zh_simp
-    tips: all
+  zh_cn:
+    option_name: zh_cn
+    opencc_config: t2s.json
